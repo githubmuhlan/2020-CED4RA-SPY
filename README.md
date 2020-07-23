@@ -2,4 +2,4 @@
 ##Member
 - Miss.Padcharin
 - Miss.Panita
-- Miss.Nanthawan
+- 6002041630042 Nanthawan Sutthirueangwong
