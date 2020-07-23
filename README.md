@@ -2,3 +2,4 @@
 ##Member
 - Miss.Padcharin
 - Miss.Panita
+- Miss.Nanthawan
