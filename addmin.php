@@ -19,7 +19,7 @@ require('conn.php');
 
 body 
             {
-                background-color:#FFFF99;
+                background-color:#FFFFFF;
                 color: rgb(45, 90, 41)	;
                 font-family: Impact;
                 font-size: 20px;
