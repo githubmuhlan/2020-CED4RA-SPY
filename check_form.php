@@ -24,7 +24,6 @@ if(mysqli_num_rows($objQuery)==1){
     
     Header("Location: addmin.php");
 
-
   }
 
   if ($_SESSION["status"]=="m"){  //ถ้าเป็น member ให้กระโดดไปหน้า user_page.php
