@@ -1,16 +1,16 @@
 
 <?php
-session_start();
+
 require('conn.php');
 
-$EMAIL = $_SESSION["e"];
 
-$efname = $_POST['fname'];
-$elname = $_POST['lname'];
-$eage = $_POST['age'];
-$eheight = $_POST['height'];
-$eweight = $_POST['weight'];
 
+$efname = $_POST['fname2'];
+$elname = $_POST['lname2'];
+$eage = $_POST['age2'];
+$eheight = $_POST['height2'];
+$eweight = $_POST['weight2'];
+$eemail = $_POST['email2'];
 
 
 
@@ -22,7 +22,7 @@ $sql = "
 	age = '$eage ', 
 	height = '$eheight ', 
 	weight = ' $eweight ' 
-	WHERE email = '$EMAIL' ";
+	WHERE email = '$eemail' ";
 
 	echo $sql;
 	
@@ -30,7 +30,7 @@ $objQuery = mysqli_query($conn, $sql);
 
 if ($objQuery) {
 	echo "Record " . $EMAIL . " Updated.";
-	Header("Location: member.php");
+	Header("Location: addmin.php");
 
 } else {
 	echo "Update " . $EMAIL . " error .";

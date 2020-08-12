@@ -1,10 +1,9 @@
-
 <?php
 session_start();
 if(isset($_POST['email'])){
 require('conn.php');
 $EMAIL = $_POST['email'];
-$PASSWORD = $_POST['password'];
+$PASSWORD = md5($_POST['password']);
 $_SESSION["e"]=$EMAIL;
 
 
@@ -19,14 +18,15 @@ if(mysqli_num_rows($objQuery)==1){
   $_SESSION["lastname"] = $row["lname"];
   $_SESSION["status"] = $row["status"];
 
-  if($_SESSION["status"]=="a"){ //ถ้าเป็น admin ให้กระโดดไปหน้า admin_page.php
+  if($_SESSION["status"]=="a"){ 
     
     
     Header("Location: addmin.php");
 
+
   }
 
-  if ($_SESSION["status"]=="m"){  //ถ้าเป็น member ให้กระโดดไปหน้า user_page.php
+  if ($_SESSION["status"]=="m"){  
 
     Header("Location: member.php");
 

@@ -1,4 +1,3 @@
-
 <?php 
 
 require_once('conn.php'); 
@@ -26,7 +25,7 @@ if(mysqli_num_rows($obj)==0)
                 VALUES ('$fname','$lname','$age','$height','$weight','$email','$password','m');
                 ";
                 $objQuery = mysqli_query($conn, $sql);
-                Header("Location: form.php");
+                Header("Location: addmin.php");
              
 
     }else{
@@ -37,8 +36,3 @@ if(mysqli_num_rows($obj)==0)
 }
 mysqli_close($conn);				   
 ?>
-
-
-
-
-    
