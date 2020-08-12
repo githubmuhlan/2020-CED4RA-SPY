@@ -1,5 +1,24 @@
-<html>
+<?php
+require('conn.php');
+session_start();
+if (isset($_POST["register"])){
+    if(empty($_POST["email"])  && empty($_POST["password"])){
+        echo '<script>alert("Both Fields are required")</script>';
+    }else{
+        $email = mysqli_real_escape_string($connect, $_POST["email"]);
+        $password  = mysqli_real_escape_string($connect, $_POST["password"]);
+        $password = md5($password);
+        $query = "INSERT INTO email (email, password) VALUES('$email', '$password')";
+        if(mysqli_query($connect, $query)){
+            echo '<script>alert("Registration Done")</script>';
+        }
+    }
+    
+}
+?>
 
+
+<html>
 <head>
 
 <style>
